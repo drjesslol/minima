@@ -18,6 +18,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+include:
+  - pages
+
 # Theme-specific settings
 
 minima:

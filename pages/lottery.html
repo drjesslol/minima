@@ -1,0 +1,30 @@
+---
+layout: page
+title: Lottery
+permalink: /lottery/
+---
+
+<textarea readonly rows="13" style="width: 100%;" id="lottery">
+  const numbers = Array.from({ length: 30 }, (_, i) => i + 1);
+
+  // shuffle
+  for (let i = numbers.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+  }
+
+  const fieldNames = ['one', 'two', 'three', 'four', 'five', 'six'];
+
+  fieldNames.forEach((fieldName, i) => {
+    $(`[name="${fieldName}"]`).val(numbers[i]);
+  });
+</textarea>
+
+<script>
+  $lotteryCode = document.getElementById('lottery');
+  console.log($lotteryCode);
+  $lotteryCode.addEventListener('click', () => {
+    $lotteryCode.select();
+    document.execCommand('copy');
+  });
+</script>

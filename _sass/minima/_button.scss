@@ -1,0 +1,16 @@
+button {
+  cursor: pointer;
+}
+
+.Button {
+  padding: 10px 15px;
+  font-size: 500;
+  background-color: #0786b8;
+  color: white;
+  border: 1px solid #0786b8;
+  border-radius: 5px;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  min-width: 80px;
+  cursor: pointer;
+}
