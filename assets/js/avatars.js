@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const readFile = () => {
-    fetch('/assets/other/avatars.csv')
+    fetch('../assets/other/avatars.csv')
     .then(response => response.text())
     .then(csvText => {
       Papa.parse(csvText, {
