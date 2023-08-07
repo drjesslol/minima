@@ -2,6 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const $avatarsElem = document.querySelector('[data-js-avatars]');
+  const csvPath = document.querySelector('[data-js-csv]').getAttribute('data-js-csv');
+
   // const avatars = {};
   let fileContents;
   const avatarSections = [];
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const readFile = () => {
-    fetch('../assets/other/avatars.csv')
+    fetch(csvPath)
     .then(response => response.text())
     .then(csvText => {
       Papa.parse(csvText, {
