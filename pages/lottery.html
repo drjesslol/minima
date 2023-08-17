@@ -4,7 +4,17 @@ title: Lottery
 permalink: /lottery/
 ---
 
-<textarea readonly rows="13" style="width: 100%;" id="lottery">
+<a
+  href="https://www.neopets.com/games/lottery.phtml"
+  target="_blank"
+  class="Button"
+>
+  Lottery
+</a>
+
+<br /><br />
+
+<textarea readonly rows="15" style="width: 100%;" id="lottery">
   const numbers = Array.from({ length: 30 }, (_, i) => i + 1);
 
   // shuffle
@@ -18,6 +28,8 @@ permalink: /lottery/
   fieldNames.forEach((fieldName, i) => {
     $(`[name="${fieldName}"]`).val(numbers[i]);
   });
+
+  $('.content form').submit();
 </textarea>
 
 <script>
